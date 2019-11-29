@@ -1,5 +1,5 @@
 
-#Twitter Sentiment Analysis
+# Twitter Sentiment Analysis
 
 This is competition hosted by Analytics Vidhya to analyze the sentiments of the twitter comments.
 
@@ -72,7 +72,7 @@ Doc2Vec model is an unsupervised algorithm to generate vectors for sentence/para
  
  d. XGBoost 
  
-	After building all the four models on the datasets with different feature, I notice 
+	# After building all the four models on the datasets with different feature, I notice 
 	XGBoost perform the best on word2vec vector dataset which gave an F1 score of 0.9 on the leaderboard and rank 38. 
 
 	I am still trying to improve the performance of the model with the help of 
