@@ -41,12 +41,43 @@ There are many different methods to extract features from tweets. They are -    
 
 a. Bag of Words
 
+The bag-of-words model is a simplified representation used in natural language processing and information retrieval (IR). In this model, a text (such as a sentence or a document) is represented as a bag (multiset) of its words, disregarding grammar and even word order but keeping multiplicity. In simple words the features of the model are all the different words that exist in all the tweets and the values are the frequency of that particular word in that particular tweet. It is just a matrix of frequencies of all the words in the tweets. 
+
 b. TF- IDF
 
-c. Word Embeddings 
+This is another method which is based on the frequency method but it is different to the bag-of-words approach in the sense that it takes into account not just the occurrence of a word in a single document (or tweet) but in the entire corpus.
 
+TF = (Number of times term t appears in a document)/(Number of terms in the document)
+IDF = log(N/n), where, N is the number of documents and n is the number of documents a term t has appeared in.
+TF-IDF = TF*IDF
 
-4. Model Development and Evaluation
+c. Word2Vect
+
+A word embedding is a learned representation for text where words that have the same meaning have a similar representation. It is this approach to representing words and documents that may be considered one of the key breakthroughs of deep learning on challenging natural language processing problems. 
+In word2vec method we are represent words in the form of vectors. In other words how words are close to each other. For example, when represented in vectores word cat will be closer to the word dog than the word shoe to the word dog. 
+
+ d. Doc2Vec Embedding
+
+Doc2Vec model is an unsupervised algorithm to generate vectors for sentence/paragraphs/documents. This approach is an extension of the word2vec. The major difference between the two is that doc2vec provides an additional context which is unique for every document in the corpus. This additional context is nothing but another feature vector for the whole document. This document vector is trained along with the word vectors.
+
+5. Model Development and Evaluation
+
+ I will be building models on the datasets with different feature sets prepared in the earlier sections — Bag-of-Words, TF-IDF, word2vec vectors, and doc2vec vectors. I will use the following algorithms to build models:
+ 
+ a. Logistic Regression 
+ 
+ b. Support Vector Machine
+ 
+ c. Random Forest 
+ 
+ d. XGBoost 
+ 
+	After building all the four models on the datasets with different feature, I notice 
+	XGBoost perform the best on word2vec vector dataset which gave an F1 score of 0.9 on the leaderboard and rank 38. 
+
+	I am still trying to improve the performance of the model with the help of 
+	ensemble modeling and fine tuning the parameters of the existing model
+
  
 
 
